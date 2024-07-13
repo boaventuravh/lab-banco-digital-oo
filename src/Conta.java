@@ -44,8 +44,8 @@ public abstract class Conta implements IConta {
 		return saldo;
 	}
 
-	public Cliente getCliente() {
-		return cliente;
+	public String getNomeCliente(){
+		return cliente.getNome();
 	}
 
 	@Override
