@@ -1,3 +1,4 @@
+import java.util.Objects;
 
 public abstract class Conta implements IConta {
 	
@@ -41,6 +42,18 @@ public abstract class Conta implements IConta {
 
 	public double getSaldo() {
 		return saldo;
+	}
+
+	@Override
+	public boolean equals(Object o) {
+		if (this == o) return true;
+		if (!(o instanceof Conta conta)) return false;
+		return getNumero() == conta.getNumero();
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(getNumero());
 	}
 
 	protected void imprimirInfosComuns() {

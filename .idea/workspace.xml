@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="fb10b07e-784e-4d80-927c-515b24fa5fe6" name="Changes" comment="" />
+    <list default="true" id="fb10b07e-784e-4d80-927c-515b24fa5fe6" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.classpath" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.project" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Banco.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Banco.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Cliente.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Cliente.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Conta.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Conta.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/ContaCorrente.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/ContaCorrente.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/ContaPoupanca.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/ContaPoupanca.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/IConta.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/IConta.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Banco.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Banco.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
