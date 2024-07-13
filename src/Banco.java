@@ -1,3 +1,4 @@
+import java.util.Comparator;
 import java.util.List;
 
 public class Banco {
@@ -24,6 +25,16 @@ public class Banco {
 	public void removerConta(int numero){
 		Conta contaRemover = contas.stream().filter(c -> c.getNumero() == numero).findFirst().orElse(null);
 		contas.remove(contaRemover);
+	}
+
+	public void listarContasPorNumero(){
+		List<Conta> contasPorNumero = contas.stream().sorted(Comparator.comparing(Conta::getNumero)).toList();
+		contasPorNumero.forEach(System.out::println);
+	}
+
+	public void listarContasPorNome(){
+		List<Conta> contasPorNome = contas.stream().sorted(Comparator.comparing(Conta::getNomeCliente)).toList();
+		contasPorNome.forEach(System.out::println);
 	}
 
 
