@@ -44,6 +44,10 @@ public abstract class Conta implements IConta {
 		return saldo;
 	}
 
+	public Cliente getCliente() {
+		return cliente;
+	}
+
 	@Override
 	public boolean equals(Object o) {
 		if (this == o) return true;
