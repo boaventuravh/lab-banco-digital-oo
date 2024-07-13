@@ -21,5 +21,10 @@ public class Banco {
 		contas.add(conta);
 	}
 
+	public void removerConta(int numero){
+		Conta contaRemover = contas.stream().filter(c -> c.getNumero() == numero).findFirst().orElse(null);
+		contas.remove(contaRemover);
+	}
+
 
 }
