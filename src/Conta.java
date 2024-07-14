@@ -60,6 +60,16 @@ public abstract class Conta implements IConta {
 		return Objects.hash(getNumero());
 	}
 
+	@Override
+	public String toString() {
+		return "Conta{" +
+				"agencia=" + agencia +
+				", numero=" + numero +
+				", saldo=" + saldo +
+				", cliente=" + cliente.getNome() +
+				'}';
+	}
+
 	protected void imprimirInfosComuns() {
 		System.out.println(String.format("Titular: %s", this.cliente.getNome()));
 		System.out.println(String.format("Agencia: %d", this.agencia));
