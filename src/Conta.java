@@ -20,13 +20,44 @@ public abstract class Conta implements IConta {
 	}
 
 	@Override
-	public void sacar(double valor) {
-		saldo -= valor;
+	public void sacar(double valorSaque) {
+		if(valorSaque <= 0) {
+			throw new IllegalArgumentException("O saque nao pode ser zero ou negativo");
+		}
+		if (podeSacarComSaldo(valorSaque)){
+			sacarSaldo(valorSaque);
+		} else if (podeSacarComChequeEspecial(valorSaque)){
+			sacarChequeEspecial(valorSaque);
+		}else {
+			System.out.println("Nao foi possivel realizar esse saque." +
+					" O valor supera o saldo e o cheque especial");
+		}
+
+	}
+
+	protected boolean podeSacarComSaldo(double valorSaque){
+		return valorSaque <= saldo;
+	}
+
+	protected void sacarSaldo(double valorSaque){
+		saldo -= valorSaque;
+	}
+
+	protected boolean podeSacarComChequeEspecial(double valorSaque){
+		return valorSaque <= saldo+limiteChequeEspecial;
+	}
+
+	protected void sacarChequeEspecial(double valorSaque){
+		limiteChequeEspecial -= (valorSaque - saldo);
+		saldo -= saldo;
 	}
 
 	@Override
-	public void depositar(double valor) {
-		saldo += valor;
+	public void depositar(double valorDeposito) {
+		if (valorDeposito <= 0){
+			throw new IllegalArgumentException("O deposito nao pode ser zero ou negativo");
+		}
+		saldo += valorDeposito;
 	}
 
 	@Override
