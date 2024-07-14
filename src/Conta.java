@@ -84,6 +84,14 @@ public abstract class Conta implements IConta {
 		return saldo;
 	}
 
+	public double getLimiteChequeEspecial() {
+		return limiteChequeEspecial;
+	}
+
+	public void setLimiteChequeEspecial(double limiteChequeEspecial) {
+		this.limiteChequeEspecial = limiteChequeEspecial;
+	}
+
 	public String getNomeCliente(){
 		return cliente.getNome();
 	}
