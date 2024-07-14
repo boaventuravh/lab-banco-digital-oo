@@ -9,11 +9,14 @@ public abstract class Conta implements IConta {
 	protected int numero;
 	protected double saldo;
 	protected Cliente cliente;
+	protected double limiteChequeEspecial;
 
 	public Conta(Cliente cliente) {
 		this.agencia = Conta.AGENCIA_PADRAO;
 		this.numero = SEQUENCIAL++;
 		this.cliente = cliente;
+		this.saldo = 0;
+		this.limiteChequeEspecial = 0;
 	}
 
 	@Override
